@@ -3,6 +3,9 @@ package com.moringaschool.myrestaurants;
 import android.content.Intent;
 import android.widget.TextView;
 
+import com.moringaschool.myrestaurants.ui.MainActivity;
+import com.moringaschool.myrestaurants.ui.RestaurantListActivity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +34,7 @@ public class MainActivityTest {
     @Test
     public void secondActivityStarted() {
         activity.findViewById(R.id.findRestaurantsButton).performClick();
-        Intent expectedIntent = new Intent(activity, RestaurantsActivity.class);
+        Intent expectedIntent = new Intent(activity, RestaurantListActivity.class);
         ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
         Intent actualIntent = shadowActivity.getNextStartedActivity();
         assertTrue(actualIntent.filterEquals(expectedIntent));
