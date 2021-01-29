@@ -49,7 +49,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
         return mRestaurant.size();
     }
 
-    public class RestaurantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class RestaurantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.restaurantImageView)
         ImageView mRestaurantImageView;
         @BindView(R.id.restaurantNameTextView)
@@ -71,7 +71,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
 
 
         @Override
-        public void onClick(View v){
+        public void onClick(View v) {
             int itemPosition = getLayoutPosition();
             Intent intent = new Intent(mContext, RestaurantDetailActivity.class);
             intent.putExtra("position", itemPosition);
@@ -79,8 +79,8 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
             mContext.startActivity(intent);
         }
 
-            public void bindRestaurant(Business restaurant) {
-            if(!restaurant.getImageUrl().isEmpty()){
+        public void bindRestaurant(Business restaurant) {
+            if (!restaurant.getImageUrl().isEmpty()) {
                 Picasso.get().load(restaurant.getImageUrl()).into(mRestaurantImageView);
             }
             mNameTextView.setText(restaurant.getName());

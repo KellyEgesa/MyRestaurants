@@ -1,4 +1,4 @@
-package com.moringaschool.myrestaurants;
+package com.moringaschool.myrestaurants.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

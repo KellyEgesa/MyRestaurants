@@ -1,4 +1,3 @@
-
 package com.moringaschool.myrestaurants.models;
 
 import com.google.gson.annotations.Expose;
@@ -18,13 +17,11 @@ public class Coordinates {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Coordinates() {
     }
 
     /**
-     * 
      * @param latitude
      * @param longitude
      */

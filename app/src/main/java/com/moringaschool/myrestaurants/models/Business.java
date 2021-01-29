@@ -1,4 +1,3 @@
-
 package com.moringaschool.myrestaurants.models;
 
 import com.google.gson.annotations.Expose;
@@ -57,15 +56,15 @@ public class Business {
     @Expose
     private List<String> transactions = null;
 
+    private String pushId;
+
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Business() {
     }
 
     /**
-     * 
      * @param distance
      * @param rating
      * @param coordinates
@@ -219,6 +218,14 @@ public class Business {
 
     public void setTransactions(List<String> transactions) {
         this.transactions = transactions;
+    }
+
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 
 }

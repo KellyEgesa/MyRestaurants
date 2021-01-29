@@ -1,4 +1,3 @@
-
 package com.moringaschool.myrestaurants.models;
 
 import com.google.gson.annotations.Expose;
@@ -33,13 +32,11 @@ public class Location {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Location() {
     }
 
     /**
-     * 
      * @param country
      * @param zipCode
      * @param address3
@@ -115,8 +112,4 @@ public class Location {
         this.zipCode = zipCode;
     }
 
-    @Override
-    public String toString() {
-        return String.format("%s, %s, %s %s", this.address1, this.city, this.state, this.zipCode);
-    }
 }
